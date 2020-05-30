@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Urban-Dictionary';
+  word:string;
+
+  newWord(val:string){
+    this.word = val;
+    console.log('app comp ' + this.word);
+  }
 }
