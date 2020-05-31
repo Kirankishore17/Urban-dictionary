@@ -8,9 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class ContentComponent implements OnInit {
 
-  @Input() term:string;
   constructor(private service:ApiService) { 
-    console.log('term: ' + this.term);
 
   }
 

@@ -2,3 +2,25 @@
     background-color: chartreuse;
     flex: 0 1 auto;
 }
+
+.result {
+    height: 5rem;
+    padding: 1rem;
+}
+
+.input-tag {
+    width: 15rem;
+    margin: 1rem;
+    height: 1.5rem;
+    border-radius: 15%;
+    background-color: rgba(206, 205, 205, 0.973);
+    padding: 10px;
+}
+
+.btn {
+    background-color: rgb(49, 47, 199);
+    color: rgb(250, 202, 8);
+    font-size: 1rem;
+    border-radius: 20%;
+    border: rgb(36, 36, 182) solid 5px;
+}
