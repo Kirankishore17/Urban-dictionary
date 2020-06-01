@@ -1,26 +1,38 @@
 *{
-    background-color: chartreuse;
+    background-color: rgb(248, 248, 248);
     flex: 0 1 auto;
 }
 
-.result {
+.search {
     height: 5rem;
     padding: 1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-tag {
     width: 15rem;
     margin: 1rem;
     height: 1.5rem;
-    border-radius: 15%;
-    background-color: rgba(206, 205, 205, 0.973);
-    padding: 10px;
+    padding: 4px;
+    padding-left: 8px;
+    font-size: 1rem;
 }
 
 .btn {
     background-color: rgb(49, 47, 199);
-    color: rgb(250, 202, 8);
+    color: rgb(253, 253, 251);
     font-size: 1rem;
-    border-radius: 20%;
-    border: rgb(36, 36, 182) solid 5px;
+    border-radius: 5%;
+    width: 5rem;
+    border: rgb(36, 36, 182) solid 2px;
+    padding: 5px;
+    margin: 1rem;
+    margin-left: 0.5rem;
+}
+
+.result {
+    padding: 2rem;
+    line-height: 1rem;
 }
