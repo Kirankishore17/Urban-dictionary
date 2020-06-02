@@ -8,10 +8,12 @@ import { ApiService } from '../api.service';
 })
 export class ContentComponent implements OnInit {
 
-  result;
-  data;
-  word:string;
+  result:any;
+  data:any;
+  word:string='';
   count:number=0;
+  status:boolean = true;
+
   constructor(private service:ApiService) { 
 
   }
@@ -25,16 +27,21 @@ export class ContentComponent implements OnInit {
       data => {
         this.data = data["list"];
         this.result = this.data[0];
-        // this.result.example = this.result.example.replace("\n","<br>")
-        console.log(JSON.stringify(this.result));
-        this.count = this.data.length > 0 ? 0 : -1;
+        if(this.result !== undefined){
+          this.count = this.data.length > 0 ? 0 : -1;
+          this.status = true;
+        }
+        else{
+          this.status = false;
+        }
         }
       );
-
   }
   reset() {
     this.count = -1;
     this.data = null;
+    this.status = false;
+
   }
 
   next(){

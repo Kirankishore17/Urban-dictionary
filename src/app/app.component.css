@@ -1,10 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
 .box {
     display: flex;
     flex-flow: column;
     height:100%;
 }
-.content {
-    padding: 10px;
-    height: 100%;
-    background-color: rgba(218, 216, 216, 0.8);
+
+.header{
+    height: 5rem;
+    background-color: rgb(3, 85, 145);
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    padding-top: 5px; 
 }
+.title {
+    font-family: 'Piedra', cursive, sans-serif;
+    font-size: 60px;
+    color: rgba(243, 243, 243, 0.9);
+    padding:2px;
+    text-decoration: none;
+    text-shadow: 3px 4px rgb(2, 18, 49);
+}
+
+.content {
+    padding: 15px;
+    padding-top: 20px;
+    height: 100%;
+    background-color: rgb(216, 217, 218);
+}
+

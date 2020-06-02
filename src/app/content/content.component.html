@@ -1,14 +1,27 @@
-<p>content works!</p>
 <div class="search">
     <form (ngSubmit)="onSearch()">
-        <input type="text" class="input-tag" [(ngModel)]="word" name="word" required>
+        <input type="text" class="input-tag" [(ngModel)]="word" name="word" placeholder="Type here.." required>
         <button class="btn" type="submit">Search</button>
     </form>
 </div>
 <div *ngIf="data && result" class="result">
-    <p style="white-space:pre-wrap">{{result.definition}}</p>
+    <div class="message word-header">
+        <p class="message-header word">{{result.word}}</p>
+    </div>
     <br>
-    <p style="white-space:pre-wrap">{{result.example}}<br></p>
+    <div class="message">
+        <p class="message-header">Definition:</p>
+        <p style="white-space:pre-wrap" class="definition">{{result.definition}}</p>    
+    </div>
+    <br>
+    <div class="message">
+        <p class="message-header">Example:</p>
+        <p style="white-space:pre-wrap" class="example">{{result.example}}</p>    
+    </div>
+    <br>
     <button (click)="next()" class="btn" *ngIf="count !== -1">Next</button>
 </div>
-<div *ngIf="!(data && result) && (data !== undefined)" class="result">No match Found.</div>
+<!-- <div *ngIf="!(data && result) && (data !== 'undefined')" class="not-found" >No match Found.</div> -->
+
+<div *ngIf="!status" class="not-found" >No match Found.</div>
+
